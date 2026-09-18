@@ -9,7 +9,7 @@
 
 /* Mengatur desain fisik Kotak (Card) */
 .card {
-    background-color: #f0f0f0;  /* Warna dasar kotak */
+    background-color: #925209cb;  /* Warna dasar kotak */
     width: 800px;                /* Lebar kotak */
     border-radius: 12px;         /* Membuat sudut kotak jadi melengkung */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20); /* Efek bayangan agar terlihat timbul */
@@ -36,14 +36,14 @@
 
 .card-content h2 {
     margin-top: 0;
-    color: #333;
+    color: #dbd9d9;
 }
 
 .card-content p {
-    color: #272727;
+    color: #ebebeb;
     line-height: 1.5;
 }
 
 body {
-    background-color: rgb(215, 245, 245);
+    background-color: bisque;
 }
