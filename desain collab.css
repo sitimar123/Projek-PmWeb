@@ -1,0 +1,39 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;             
+    justify-content: center;     
+    gap: 50px;                   
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;  /* Warna dasar kotak */
+    width: 1050px;                /* Lebar kotak */
+    border-radius: 12px;         /* Membuat sudut kotak jadi melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20); /* Efek bayangan agar terlihat timbul */
+    overflow: hidden;            /* Memastikan gambar tidak melebihi batas sudut melengkung */
+}
+
+/* Mengatur isi teks di dalam kotak */
+.card-content {
+    padding: 15px 25px;          /* Jarak antara teks dengan pinggiran kotak */
+}
+
+.card-content h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+.card-content p {
+    color: #272727;
+    line-height: 1.5;
+}
+
+body {
+    background-image: url('background\ web2.jfif'); /* Nama file gambar kamu */
+    background-size: cover;       /* Memastikan gambar memenuhi seluruh layar */
+    background-repeat: no-repeat; /* Mencegah gambar diulang-ulang (ubin) */
+    background-position: center;  /* Memosisikan gambar tepat di tengah */
+    background-attachment: fixed; /* (Opsional) Membuat gambar tetap diam saat di-scroll */
+}
+
