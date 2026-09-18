@@ -16,7 +16,7 @@
 
 /* Mengatur isi teks di dalam kotak */
 .card-content {
-    padding: 15px 25px;          /* Jarak antara teks dengan pinggiran kotak */
+    padding: 20px 35px;          /* Jarak antara teks dengan pinggiran kotak */
 }
 
 .card-content h1 {
@@ -30,7 +30,7 @@
 }
 
 body {
-    background-image: url('background\ web2.jfif'); /* Nama file gambar kamu */
+    background-image: url('download.jpg'); /* Nama file gambar kamu */
     background-size: cover;       /* Memastikan gambar memenuhi seluruh layar */
     background-repeat: no-repeat; /* Mencegah gambar diulang-ulang (ubin) */
     background-position: center;  /* Memosisikan gambar tepat di tengah */
