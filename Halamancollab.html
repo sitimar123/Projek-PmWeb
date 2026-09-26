@@ -1,35 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masakan Khas Indonesia</title>
     <link rel="stylesheet" href="desain collab.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <!-- Navigasi Bar Tailwind -->
+    <nav class="bg-amber-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo / Judul Utama -->
+            <a href="Halamancollab.html" class="text-xl font-bold tracking-wide hover:text-amber-200 transition">
+                <h2>Kuliner Nusantara</h2>
+            </a>
+
+            <!-- Menu Navigasi dengan Dropdown -->
+            <div class="flex space-x-6 items-center font-medium">
+                <a href="Halamancollab.html" class="hover:text-amber-200 transition">Beranda</a>
+
+                <!-- Dropdown Daftar Masakan -->
+                <div class="relative group">
+                    <button class="hover:text-amber-200 transition flex items-center gap-1 focus:outline-none py-2">
+                        Daftar Masakan
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <!-- Sub-menu (Tampil saat kursor diarahkan ke tombol) -->
+                    <div class="absolute left-0 hidden group-hover:block bg-white text-gray-800 mt-2 w-48 rounded-lg shadow-xl py-2 transition-all">
+                        <a href="index.html" class="block px-4 py-2 hover:bg-amber-100 transition">Pempek</a>
+                        <a href="index.html" class="block px-4 py-2 hover:bg-amber-100 transition">Kerak Telor</a>
+                        <a href="index.html" class="block px-4 py-2 hover:bg-amber-100 transition">Karedok</a>
+                        <a href="masakan.html" class="block px-4 py-2 hover:bg-amber-100 transition">Rendang</a>
+                        <a href="masakan.html" class="block px-4 py-2 hover:bg-amber-100 transition">Sate Bandeng</a>
+                        <a href="masakan.html" class="block px-4 py-2 hover:bg-amber-100 transition">Gudeg</a>
+                    </div>
+                </div>
+
+                <a href="#kontak" class="hover:text-amber-200 transition">Kontak</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Konten Utama Website Kamu -->
     <div class="card-container">
         <div class="card">
             <div class="card-content">
                 <h1>Masakan Khas Indonesia</h1>
-                <p class="tagline">Menjelajahi cita rasa Nusantara dari berbagai daerah di Indonesia.</p>
-                <p><a href="https://id.wikipedia.org/wiki/Daftar_masakan_Indonesia" target="_blank">Masakan khas Indonesia</a> adalah masakan dengan ciri khas yang dimiliki negara Indonesia, Indonesia memiliki banyak pulau, suku dan ras yang berbeda pula. 
-                Maka makanan khas yang dimiliki Indonesia pun sangat beragam dan banyak dari berbagai daerah. Di web ini kami akan memperkenalkan 6 masakan daerah khas indonesia yang banyak disukai dari berbagai kalangan.
+                <p>
+                    <a href="https://id.wikipedia.org/wiki/Daftar_masakan_Indonesia" target="_blank">Masakan khas Indonesia</a> adalah masakan dengan ciri khas yang dimiliki negara Indonesia, Indonesia memiliki banyak pulau, suku dan ras yang berbeda pula. 
+                    Maka makanan khas yang dimiliki Indonesia pun sangat beragam dan banyak dari berbagai daerah. Di web ini kami akan memperkenalkan 6 masakan daerah khas indonesia yang banyak disukai dari berbagai kalangan.
                 </p>
-
             </div>
         </div>
     </div>
-        <div class="daftar-masakan">
-            <h2>Daftar Masakan</h2>
 
-            <div class="menu-masakan">
-                 <a href="index.html">Pempek</a>
-                 <a href="index.html">Kerak Telor</a>
-                 <a href="index.html">Karedok</a>
-                 <a href="masakan.html">Rendang</a>
-                 <a href="masakan.html">Sate Bandeng</a>
-                <a href="masakan.html">Gudeg</a>
-            </div>
+    <div class="daftar-masakan">
+        <h2>Daftar Masakan</h2>
+        <div class="menu-masakan">
+            <a href="index.html">Pempek</a>
+            <a href="index.html">Kerak Telor</a>
+            <a href="index.html">Karedok</a>
+            <a href="masakan.html">Rendang</a>
+            <a href="masakan.html">Sate Bandeng</a>
+            <a href="masakan.html">Gudeg</a>
         </div>
+    </div>
+
 </body>
 </html>

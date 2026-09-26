@@ -1,27 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Makanan Khas Indonesia</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Menghubungkan ke stylesheet bersama & Tailwind CDN -->
+    <link rel="stylesheet" href="desain collab.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
-    <h1>Masakan Khas Indonesia</h1>
-    <p class="subtitle">Mengenal berbagai makanan khas dari berbgai daerah di Indonesia.</p>
+    <!-- Navigasi Bar Tailwind (Sama dengan halamancollab.html) -->
+    <nav class="bg-amber-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo / Judul Utama -->
+            <a href="Halamancollab.html" class="text-xl font-bold tracking-wide hover:text-amber-200 transition">
+                Kuliner Nusantara
+            </a>
 
-    <h2><a href="https://id.wikipedia.org/wiki/Pempek">Pempek</a></h2>
-    <img src="Pempek.jpeg" alt="Pempek">
-    <p>Pempek adalah makanan khas Sumatera Selatan yang terbuat dari adonan ikan dan tepung tapioka. Pempek biasanya disajikan dengan kuah cuko yang memiliki rasa manis, asam, dan pedas.</p>
+            <!-- Menu Navigasi -->
+            <div class="flex space-x-6 items-center font-medium">
+                <a href="Halamancollab.html" class="hover:text-amber-200 transition">Beranda</a>
 
-    <h2><a href="https://id.wikipedia.org/wiki/Kerak_telor">Kerak Telor</a></h2>
-    <img src="Kerak-Telor.jpeg" alt="Kerak Telor">
-    <p>Kerak telor adalah makanan khas Betawi yang terbuat dari beras ketan putih, telur ayam atau bebek, ebi, dan kelapa sangrai. Makanan ini dimasak hingga bagian bawahnya berkerak dan biasanya disajikan dengan serundeng.</p>
+                <!-- Dropdown Daftar Masakan -->
+                <div class="relative group">
+                    <button class="hover:text-amber-200 transition flex items-center gap-1 focus:outline-none py-2">
+                        Daftar Masakan
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 hidden group-hover:block bg-white text-gray-800 mt-2 w-48 rounded-lg shadow-xl py-2 transition-all">
+                        <a href="index.html" class="block px-4 py-2 hover:bg-amber-100 transition">Pempek</a>
+                        <a href="index.html" class="block px-4 py-2 hover:bg-amber-100 transition">Kerak Telor</a>
+                        <a href="index.html" class="block px-4 py-2 hover:bg-amber-100 transition">Karedok</a>
+                        <a href="masakan.html" class="block px-4 py-2 hover:bg-amber-100 transition">Rendang</a>
+                        <a href="masakan.html" class="block px-4 py-2 hover:bg-amber-100 transition">Sate Bandeng</a>
+                        <a href="masakan.html" class="block px-4 py-2 hover:bg-amber-100 transition">Gudeg</a>
+                    </div>
+                </div>
 
-    <h2><a href="https://id.wikipedia.org/wiki/Karedok">Karedok</a></h2>
-    <img src="Karedok.jpeg" alt="Karedok">
-    <p>Karedok adalah makanan khas Sunda, Jawa Barat, yang terdiri dari berbagai sayuran mentah seperti kacang panjang, taoge, kol, mentimun, dan terong. Karedok disajikan dengan bumbu kacang yang gurih dan khas.</p>
+                <a href="#kontak" class="hover:text-amber-200 transition">Kontak</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Kartu Masakan -->
+    <div class="card-container">
+        
+        <!-- Pempek -->
+        <div class="card">
+            <img src="Pempek.jpeg" alt="Seporsi Pempek Sumatera Selatan">
+            <div class="card-content">
+                <h2>Pempek</h2>
+                <p><a href="https://id.wikipedia.org/wiki/Pempek" target="_blank">Pempek</a> adalah makanan khas Sumatera Selatan yang terbuat dari adonan ikan dan tepung tapioka. Pempek biasanya disajikan dengan kuah cuko yang memiliki rasa manis, asam, dan pedas.</p>
+            </div>
+        </div>
+
+        <!-- Kerak Telor -->
+        <div class="card">
+            <img src="Kerak-Telor.jpeg" alt="Seporsi Kerak Telor Betawi">
+            <div class="card-content">
+                <h2>Kerak Telor</h2>
+                <p><a href="https://id.wikipedia.org/wiki/Kerak_telor" target="_blank">Kerak telor</a> adalah makanan khas Betawi yang terbuat dari beras ketan putih, telur ayam atau bebek, ebi, dan kelapa sangrai. Makanan ini dimasak hingga bagian bawahnya berkerak dan biasanya disajikan dengan serundeng.</p>
+            </div>
+        </div>
+
+        <!-- Karedok -->
+        <div class="card">
+            <img src="Karedok.jpeg" alt="Seporsi Karedok Sunda">
+            <div class="card-content">
+                <h2>Karedok</h2>
+                <p><a href="https://id.wikipedia.org/wiki/Karedok" target="_blank">Karedok</a> adalah makanan khas Sunda, Jawa Barat, yang terdiri dari berbagai sayuran mentah seperti kacang panjang, taoge, kol, mentimun, dan terong. Karedok disajikan dengan bumbu kacang yang gurih dan khas.</p>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>

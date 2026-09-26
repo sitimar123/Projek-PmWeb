@@ -1,52 +1,161 @@
-.card-container {
-    display: flex;
-    flex-wrap: wrap;             
-    justify-content: center;     
-    gap: 50px;                   
-    padding: 20px;
-}
-
-.card {
-    background-color: #ffffff;  /* Warna dasar kotak */
-    width: 1050px;                /* Lebar kotak */
-    border-radius: 12px;         /* Membuat sudut kotak jadi melengkung */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20); /* Efek bayangan agar terlihat timbul */
-    overflow: hidden;            /* Memastikan gambar tidak melebihi batas sudut melengkung */
-}
-
-/* Mengatur isi teks di dalam kotak */
-.card-content {
-    padding: 20px 35px;          /* Jarak antara teks dengan pinggiran kotak */
-}
-
-.card-content h1 {
-    margin-top: 0;
-    color: #333;
-}
-
-.card-content p {
-    color: #272727;
-    line-height: 1.5;
+/* ==========================================
+   1. REGULASI DASAR & BACKGROUND
+   ========================================== */
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-image: url('download.jpg'); /* Nama file gambar kamu */
-    background-size: cover;       /* Memastikan gambar memenuhi seluruh layar */
-    background-repeat: no-repeat; /* Mencegah gambar diulang-ulang (ubin) */
-    background-position: center;  /* Memosisikan gambar tepat di tengah */
-    background-attachment: fixed; /* (Opsional) Membuat gambar tetap diam saat di-scroll */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #F4F1E6;                 /* Warna cadangan jika gambar tidak memuat */
+    background-image: url('download.jpg');     /* Latar belakang halaman web */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #333333;
 }
 
-/* Daftar masakan */
-.daftar-masakan {
-    margin: 40px auto;
-    width: 1050px;
+/* ==========================================
+   2. JUDUL UTAMA & SUBTITLE (HALAMAN)
+   ========================================== */
+h1 {
     text-align: center;
+    color: #FFF8E7;
+    font-family: Georgia, serif;
+    font-size: 45px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #E8C07D;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+/* Garis dekoratif di bawah subtitle */
+.subtitle::after {
+    content: "";
+    display: block;
+    width: 480px;
+    max-width: 80%;
+    height: 2px;
+    background-color: #E8C07D;
+    margin: 15px auto 0;
+}
+
+/* ==========================================
+   3. PEMBUNGKUS KARTU (CARD CONTAINER)
+   ========================================== */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;             /* Kartu berjajar ke samping & pindah baris jika tidak muat */
+    justify-content: center;     /* Mengetengahkan posisi kartu */
+    gap: 30px;                   /* Jarak antar kartu */
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Desain fisik Kartu Masakan (Ukuran 320px agar berjajar ke samping) */
+.card {
+    background-color: #925209cb; /* Cokelat transparan elegan */
+    width: 320px;                /* Lebar ideal agar muat 3 kartu bersisian di laptop */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover Kartu */
+.card:hover {
+    transform: translateY(-10px) scale(1.02); /* Terangkat dan membesar */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Khusus untuk Kartu Pembuka / Utama di Beranda */
+.card:has(h1) {
+    width: 100%;
+    max-width: 1050px;
+}
+
+/* Gambar di dalam Kartu */
+.card img {
+    display: block;
+    width: 100%;
+    height: 220px;               /* Tinggi disesuaikan dengan kartu */
+    object-fit: cover;           /* Mencegah gambar gepeng */
+}
+
+/* ==========================================
+   4. KONTEN TEKS DALAM KARTU
+   ========================================== */
+.card-content {
+    padding: 20px 25px;
+}
+
+.card-content h2, 
+h2 {
+    font-family: Georgia, serif;
+    color: #FFF8E7;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.card-content h2 a, 
+h2 a {
+    color: #FFF8E7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-content h2 a:hover, 
+h2 a:hover {
+    color: #F3D6A2;
+    text-decoration: underline;
+}
+
+.card-content p, 
+p {
+    line-height: 1.6;
+    color: #EBEBEB;
+    font-size: 15px;
+}
+
+.card-content p a {
+    color: #F3D6A2;
+    text-decoration: underline;
+}
+
+.card-content p a:hover {
+    color: #FFFFFF;
+}
+
+/* ==========================================
+   5. DAFTAR MASAKAN & TOMBOL MENU (BERANDA)
+   ========================================== */
+.daftar-masakan {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 1050px;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .daftar-masakan h2 {
-    color: #ffffff;
+    color: #532C0D;
     font-size: 28px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
 }
 
@@ -58,79 +167,14 @@ body {
 }
 
 .menu-masakan a {
-    background-color: #C49A6C;
-    color: #FFF8E7;
+    background-color: #E8C07D;
+    color: #6B4423;
+    font-weight: bold;
     text-decoration: none;
     padding: 12px 25px;
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
-
-.menu-masakan a:hover {
-    background-color: #2F5D50;
-    color: #ffffff;
-}
-
-/* Tambahan tampilan halaman utama */
-
-.card-content h1 {
-    font-family: Georgia, serif;
-    font-size: 42px;
-    color: #2F5D50;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    text-align: center !important;
-    color: #E8C07D !important;
-    font-size: 21px !important;
-    font-style: italic;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-.card-content p {
-    font-family: Georgia, serif;
-    font-size: 17px;
-}
-
-.daftar-masakan h2 {
-    font-family: Georgia, serif;
-    color: #2F5D50;
-    font-size: 30px;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-}
-
-/* Tambahan warna coklat untuk tampilan website */
-
-.card {
-    background-color: #6B4423;
-}
-
-.card-content h1 {
-    color: #FFF8E7;
-}
-
-.card-content p {
-    color: #FFFFFF;
-}
-
-.card-content p a {
-    color: #F3D6A2;
-}
-
-.daftar-masakan h2 {
-    color: #532c0d;
-}
-
-.menu-masakan a {
-    background-color: #E8C07D;
-    color: #6B4423;
-    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .menu-masakan a:hover {
@@ -138,10 +182,10 @@ body {
     color: #FFF8E7;
 }
 
-/* Tombol halaman utama */
+/* Tombol Navigasi Bawah */
 .tombol-utama {
     text-align: center;
-    margin-top: 25px;
+    margin: 30px 0;
 }
 
 .tombol-utama a {
@@ -150,11 +194,48 @@ body {
     color: #6B4423;
     text-decoration: none;
     padding: 12px 25px;
-    margin: 0 6px;
     border-radius: 8px;
     font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .tombol-utama a:hover {
     background-color: #FFF8E7;
+}
+
+/* ==========================================
+   6. RESPONSIF UNTUK LAYAR HP (<= 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    .card-container {
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%; /* Melebar penuh di HP */
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .subtitle::after {
+        width: 260px;
+    }
+
+    .menu-masakan a,
+    .tombol-utama a {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
