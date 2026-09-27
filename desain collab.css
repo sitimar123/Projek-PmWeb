@@ -1,14 +1,15 @@
 /* ==========================================
    1. REGULASI DASAR & BACKGROUND
    ========================================== */
+
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #F4F1E6;                 /* Warna cadangan jika gambar tidak memuat */
-    background-image: url('download.jpg');     /* Latar belakang halaman web */
+    background-color: #F4F1E6;
+    background-image: url('download.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,9 +19,11 @@ body {
     color: #333333;
 }
 
+
 /* ==========================================
-   2. JUDUL UTAMA & SUBTITLE (HALAMAN)
+   2. JUDUL UTAMA & SUBTITLE
    ========================================== */
+
 h1 {
     text-align: center;
     color: #FFF8E7;
@@ -42,7 +45,6 @@ h1 {
     font-weight: bold;
 }
 
-/* Garis dekoratif di bawah subtitle */
 .subtitle::after {
     content: "";
     display: block;
@@ -53,79 +55,68 @@ h1 {
     margin: 15px auto 0;
 }
 
+
 /* ==========================================
-   3. PEMBUNGKUS KARTU (CARD CONTAINER)
+   3. PEMBUNGKUS KARTU
    ========================================== */
+
 .card-container {
     display: flex;
-    flex-wrap: wrap;             /* Kartu berjajar ke samping & pindah baris jika tidak muat */
-    justify-content: center;     /* Mengetengahkan posisi kartu */
-    gap: 30px;                   /* Jarak antar kartu */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
     padding: 30px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Desain fisik Kartu Masakan (Ukuran 320px agar berjajar ke samping) */
 .card {
-    background-color: #925209cb; /* Cokelat transparan elegan */
-    width: 320px;                /* Lebar ideal agar muat 3 kartu bersisian di laptop */
+    background-color: #925209cb;
+    width: 320px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efek Hover Kartu */
 .card:hover {
-    transform: translateY(-10px) scale(1.02); /* Terangkat dan membesar */
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* Khusus untuk Kartu Pembuka / Utama di Beranda */
 .card:has(h1) {
     width: 100%;
     max-width: 1050px;
 }
 
-/* Gambar di dalam Kartu */
 .card img {
     display: block;
     width: 100%;
-    height: 220px;               /* Tinggi disesuaikan dengan kartu */
-    object-fit: cover;           /* Mencegah gambar gepeng */
+    height: 220px;
+    object-fit: cover;
 }
+
 
 /* ==========================================
    4. KONTEN TEKS DALAM KARTU
    ========================================== */
+
 .card-content {
     padding: 20px 25px;
 }
 
-.card-content h2, 
-h2 {
+.card-content h2,
+.card-content h1 {
     font-family: Georgia, serif;
     color: #FFF8E7;
+}
+
+.card-content h2 {
     margin-top: 0;
     margin-bottom: 12px;
 }
 
-.card-content h2 a, 
-h2 a {
-    color: #FFF8E7;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.card-content h2 a:hover, 
-h2 a:hover {
-    color: #F3D6A2;
-    text-decoration: underline;
-}
-
-.card-content p, 
-p {
+.card-content p {
     line-height: 1.6;
     color: #EBEBEB;
     font-size: 15px;
@@ -140,15 +131,18 @@ p {
     color: #FFFFFF;
 }
 
+
 /* ==========================================
-   5. DAFTAR MASAKAN & TOMBOL MENU (BERANDA)
+   5. DAFTAR MASAKAN
    ========================================== */
+
 .daftar-masakan {
     margin: 30px auto;
     width: 100%;
     max-width: 1050px;
     text-align: center;
     padding: 0 20px;
+    scroll-margin-top: 90px;
 }
 
 .daftar-masakan h2 {
@@ -182,7 +176,11 @@ p {
     color: #FFF8E7;
 }
 
-/* Tombol Navigasi Bawah */
+
+/* ==========================================
+   6. TOMBOL NAVIGASI BAWAH
+   ========================================== */
+
 .tombol-utama {
     text-align: center;
     margin: 30px 0;
@@ -204,17 +202,314 @@ p {
     background-color: #FFF8E7;
 }
 
+
 /* ==========================================
-   6. RESPONSIF UNTUK LAYAR HP (<= 768px)
+   7. HERO SECTION
    ========================================== */
+
+.hero-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: rgba(255, 248, 235, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    margin: 0 0 18px;
+    font-size: 42px;
+    color: #7b3f00;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4a3525;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #92400e;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #b45309;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 430px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==========================================
+   8. TENTANG WEBSITE
+   ========================================== */
+
+.tentang {
+    max-width: 1050px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(255, 248, 235, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.tentang h2 {
+    margin: 0 0 20px;
+    color: #7b3f00;
+    font-size: 32px;
+}
+
+.tentang p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    color: #4a3525;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   9. INFORMASI KULINER
+   ========================================== */
+
+.info-kuliner {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255, 248, 235, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.info-kuliner h2 {
+    margin: 0 0 15px;
+    color: #7b3f00;
+    font-size: 32px;
+}
+
+.info-pembuka {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+    color: #4a3525;
+    font-size: 16px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 25px 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    color: #92400e;
+    margin: 10px 0;
+}
+
+.info-card p {
+    color: #5a4635;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   10. FAKTA MENARIK
+   ========================================== */
+
+.fakta {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255, 248, 235, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.fakta h2 {
+    margin: 0 0 30px;
+    color: #7b3f00;
+    font-size: 32px;
+}
+
+.fakta-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.fakta-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 25px 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.fakta-card:hover {
+    transform: translateY(-5px);
+}
+
+.fakta-card h3 {
+    color: #92400e;
+    margin-bottom: 12px;
+}
+
+.fakta-card p {
+    color: #5a4635;
+    line-height: 1.6;
+}
+
+/* 11. TIPS MENIKMATI KULINER */
+.tips-kuliner {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255, 248, 235, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.tips-kuliner h2 {
+    margin: 0 0 30px;
+    color: #7b3f00;
+    font-size: 32px;
+}
+
+.tips-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tips-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 25px 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.tips-card:hover {
+    transform: translateY(-5px);
+}
+
+.tips-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.tips-card h3 {
+    color: #92400e;
+    margin: 10px 0;
+}
+
+.tips-card p {
+    color: #5a4635;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   12. FOOTER
+   ========================================== */
+
+.footer {
+    margin-top: 60px;
+    padding: 35px 20px;
+    text-align: center;
+    background: #7b3f00;
+    color: white;
+}
+
+.footer h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.footer p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: white;
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ==========================================
+   13. RESPONSIVE / HP
+   ========================================== */
+
 @media (max-width: 768px) {
+
     .card-container {
         padding: 15px 10px;
         gap: 20px;
     }
 
     .card {
-        width: 100%; /* Melebar penuh di HP */
+        width: 100%;
     }
 
     .card img {
@@ -235,6 +530,109 @@ p {
 
     .menu-masakan a,
     .tombol-utama a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* TIPS HP */
+.tips-kuliner {
+    margin: 30px 15px;
+    padding: 30px 20px;
+}
+
+.tips-kuliner h2 {
+    font-size: 26px;
+}
+
+.tips-container {
+    flex-direction: column;
+}
+
+.tips-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    /* HERO HP */
+
+    .hero-section {
+        margin: 25px 15px;
+        padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        height: 220px;
+    }
+
+    .hero-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* TENTANG HP */
+
+    .tentang {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    .tentang h2 {
+        font-size: 26px;
+    }
+
+    .tentang p {
+        font-size: 15px;
+    }
+
+
+    /* INFO HP */
+
+    .info-kuliner {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    .info-kuliner h2 {
+        font-size: 26px;
+    }
+
+    .info-container {
+        flex-direction: column;
+    }
+
+    .info-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        /* FAKTA MENARIK HP */
+
+    .fakta {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    .fakta h2 {
+        font-size: 26px;
+    }
+
+    .fakta-container {
+        flex-direction: column;
+    }
+
+    .fakta-card {
         width: 100%;
         box-sizing: border-box;
     }
