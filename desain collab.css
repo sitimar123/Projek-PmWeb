@@ -303,6 +303,12 @@ h1 {
    9. INFORMASI KULINER
    ========================================== */
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;   
+}
+
 .info-kuliner {
     max-width: 1100px;
     margin: 50px auto;
